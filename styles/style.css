@@ -65,9 +65,8 @@ section {
 }
 
 #categories,
-#selection,
-{
-text-align: center;
+#selection {
+    text-align: center;
 }
 
 #categories .container-grid-categories,
