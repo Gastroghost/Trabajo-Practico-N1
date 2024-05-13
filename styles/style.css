@@ -1,14 +1,26 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 :root {
     --color-primary: #f59b1a;
-    --color-secondary: black
+    --color-secondary: black;
+    --fuente-primaria: Arial, sans-serif;
+    --fuente-secundaria: Georgia, serif;
 }
 
+h1,
+h2,
+h3 {
+    font-family: var(--fuente-primaria);
+}
+
+p,
+span,
+button {
+    font-family: var(--fuente-secundaria);
+}
 
 header {
     background-color: var(--color-primary);
@@ -34,9 +46,15 @@ header nav ul li a:hover {
     color: white;
 }
 
+header img {
+    width: 70px;
+    margin-left: 30px;
+}
+
 section {
     padding: 40px;
 }
+
 
 #banner {
     display: flex;
@@ -46,6 +64,7 @@ section {
     background-size: cover;
     color: white;
     min-height: 80vh;
+
 }
 
 #banner h1 {
@@ -57,6 +76,7 @@ section {
     font-size: 25px;
     color: var(--color-primary);
 }
+
 
 #categories h2,
 #selection h2,
@@ -80,12 +100,11 @@ section {
 #categories .card,
 #selection .card {
     padding: 20px;
-    border: 1px solid black;
-    box-shadow: -3px -1px 9px 1px rgba(0, 0, 0, 0.46);
-    -webkit-box-shadow: -3px -1px 9px 1px rgba(0, 0, 0, 0.46);
-    -moz-box-shadow: -3px -1px 9px 1px rgba(0, 0, 0, 0.46);
+    box-shadow: -3px -1px 9px 1px rgba(0, 0, 0, 0.144);
+    -webkit-box-shadow: -3px -1px 9px 1px rgba(0, 0, 0, 0.144);
+    -moz-box-shadow: -3px -1px 9px 1px rgba(0, 0, 0, 0.144);
     border-radius: 10px;
-    margin: 10px;
+
 }
 
 #categories .card:hover {
@@ -96,33 +115,48 @@ section {
 #selection .card a,
 #contact button {
     text-decoration: none;
-    border: 1px solid var(--color-secondary);
     padding: 5px 10px;
     display: block;
     width: 50%;
-    margin: 10px auto;
+    margin: 30px auto 0 auto;
     background-color: var(--color-primary);
     color: var(--color-secondary);
 }
 
 #selection {
-    background-color: var(--color-primary);
+    background-image: url(../Assets/Fondo-sabores.jpg);
+    background-size: cover;
+}
+
+#selection h2 {
+    color: white;
 }
 
 #selection .card {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.87);
+}
+
+#selection .card img {
+    width: 250px;
 }
 
 /* Contacto */
 
+#contact {
+    background-color: var(--color-primary);
+}
+
 #contact h2 {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 form {
     width: 50%;
     padding: 30px;
     margin: auto;
+    background-color: rgba(255, 255, 255, 0.87);
+    border-radius: 5px;
 }
 
 form * {
@@ -135,14 +169,108 @@ form * {
 
 form input,
 textarea {
-    border: 0.5px solid var(--color-secondary);
-    padding: 5px;
+    border: var(--color-secondary);
+    padding: 10px;
     border-radius: 5px;
+    width: 98%;
+}
+
+form label {
+    margin: 10px 0;
+}
+
+.curved {
+    position: relative;
+    background: var(--color-primary);
+    height: 3vh;
+    border-bottom-left-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
 }
 
 footer {
+
+    max-height: 5vh;
     padding: 20px;
-    background-color: var(--color-primary);
     color: black;
     text-align: center;
+}
+
+footer p {
+    text-align: left;
+}
+
+footer p a {
+
+    color: black;
+    text-decoration: none;
+}
+
+footer p a i:hover {
+    color: var(--color-primary);
+}
+
+footer p i {
+    margin-right: 5px;
+    color: black;
+
+}
+
+
+.contenedor {
+    position: relative;
+    width: 100%;
+}
+
+.boton-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.boton-float i {
+    width: 30px;
+}
+
+@media (max-width: 950px) {
+
+    #categories .container-grid-categories,
+    #selection .container-grid-selection {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #banner {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 650px) {
+
+    #categories .container-grid-categories,
+    #selection .container-grid-selection {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 570px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    #selection .card img {
+        width: 150px;
+    }
+
+    #banner img {
+        width: 200px;
+    }
 }
