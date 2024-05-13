@@ -220,17 +220,12 @@ footer p i {
 }
 
 
-.contenedor {
-    position: relative;
-    width: 100%;
-}
-
 .boton-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #25d366;
-    color: #fff;
+    color: white;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -243,6 +238,7 @@ footer p i {
 
 .boton-float i {
     width: 30px;
+    color: white;
 }
 
 @media (max-width: 950px) {
