@@ -74,7 +74,11 @@ section {
 #banner p {
     width: 70%;
     font-size: 25px;
-    color: var(--color-primary);
+    color: rgb(228, 219, 219);
+}
+
+#banner img {
+    max-height: 300px;
 }
 
 
