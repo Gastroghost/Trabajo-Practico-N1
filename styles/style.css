@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+:root {
+    --color-primary: #f59b1a;
+    --color-secondary: black
+}
+
+
+header {
+    background-color: var(--color-primary);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+
+section {
+    padding: 40px;
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../Assets/imagen-de-fondo.jpg);
+    background-size: cover;
+    color: white;
+    min-height: 80vh;
+}
+
+#banner h1 {
+    font-size: 40px;
+}
+
+#banner p {
+    width: 70%;
+    font-size: 25px;
+    color: var(--color-primary);
+}
+
+#categories h2,
+#selection h2,
+#contact h2 {
+    font-size: 40px;
+}
+
+#categories,
+#selection,
+{
+text-align: center;
+}
+
+#categories .container-grid-categories,
+#selection .container-grid-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+#categories .card,
+#selection .card {
+    padding: 20px;
+    border: 1px solid black;
+    box-shadow: -3px -1px 9px 1px rgba(0, 0, 0, 0.46);
+    -webkit-box-shadow: -3px -1px 9px 1px rgba(0, 0, 0, 0.46);
+    -moz-box-shadow: -3px -1px 9px 1px rgba(0, 0, 0, 0.46);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#categories .card:hover {
+    transform: scale(1.05);
+}
+
+#categories .card a,
+#selection .card a,
+#contact button {
+    text-decoration: none;
+    border: 1px solid var(--color-secondary);
+    padding: 5px 10px;
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+#selection {
+    background-color: var(--color-primary);
+}
+
+#selection .card {
+    background-color: white;
+}
+
+/* Contacto */
+
+#contact h2 {
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+}
+
+form * {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+}
+
+form input,
+textarea {
+    border: 0.5px solid var(--color-secondary);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 20px;
+    background-color: var(--color-primary);
+    color: black;
+    text-align: center;
+}
